@@ -1,7 +1,7 @@
 class Paper{
     constructor(x,y,r){
         var options={
-            isStatic:true,
+            isStatic:false,
             restitution:0.3,
             friction:0.5,
             density:1.2
@@ -22,7 +22,7 @@ class Paper{
         ellipseMode(RADIUS);
         strokeWeight(4)
         imageMode(RADIUS);
-        image(this.image,0,0,this.radius*0.5,this.radius*0.5);
+        image(this.image,0,0,this.radius,this.radius);
         pop();
     }
    
