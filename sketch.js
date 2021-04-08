@@ -11,15 +11,16 @@ var world;
 
 
 function setup() {
-	createCanvas(1600, 700);
+	createCanvas(1400, 500);
 	rectMode(CENTER);
 
 	engine = Engine.create();
 	world = engine.world;
-	
-	groundObject=new ground(width/2,670,width,20);
-	dustbinObj=new dustbin(1200,650);
-  paperObject = new Paper(100,450,50)
+
+  paperObject = new Paper(100,450,60)
+	groundObject=new ground(width/2,470,width,20);
+	dustbinObj=new dustbin(1200,450);
+
 
 	Engine.run(engine);
   
@@ -30,19 +31,15 @@ function draw() {
   rectMode(CENTER);
   background(230);
 
-  groundObject.display();
-  dustbinObj.display();
   paperObject.display();
+  dustbinObj.display();
+  groundObject.display();
 
-  keyPressed();
 }
 
-Matter.Body.applyForce(body, position, force);
 
 function keyPressed() { 
-
 if (keyCode === UP_ARROW) { 
-Matter.Body.applyForce(paperObject.body,paperObject.body.position,{x:10,y:-30}); 
+Matter.Body.applyForce(paperObject.body,paperObject.body.position,{x:91,y:-94}); 
 }
-
 }

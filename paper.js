@@ -19,10 +19,9 @@ class Paper{
         var paperpos=this.body.position;
         push();
         translate(paperpos.x,paperpos.y);
-        ellipseMode(RADIUS);
         strokeWeight(4)
-        imageMode(RADIUS);
-        image(this.image,0,0,this.radius,this.radius);
+        imageMode(CENTER);
+        image(this.image,0,0,this.r,this.r);
         pop();
     }
    

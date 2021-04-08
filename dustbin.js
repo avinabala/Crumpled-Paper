@@ -24,7 +24,7 @@ class dustbin
 			var posBottom=this.bottomBody.position;
 			var posLeft=this.leftWallBody.position;
 			var posRight=this.rightWallBody.position;
-
+            
 			
 
 			push()
